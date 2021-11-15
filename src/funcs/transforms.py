@@ -1,5 +1,5 @@
 from cv2 import cv2
-
+import numpy as np
 def transformVectors(files):
     vectors = []
     images = []
@@ -23,7 +23,6 @@ def transformVectors(files):
 
 
 def transformVector(file):
-    print("dentro")
     vector = []
     test = cv2.imread(file)
     img = cv2.cvtColor(test, cv2.COLOR_BGR2GRAY)
@@ -35,6 +34,6 @@ def transformVector(file):
         if imgTest[i] == 0:
             imgTest[i] = -1
         # vector.append(int(imgTest[i]))
-    print(imgTest)
+    # print(imgTest)
     # print(vector)
     return imgTest
