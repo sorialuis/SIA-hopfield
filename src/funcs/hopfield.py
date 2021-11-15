@@ -2,7 +2,7 @@
 import numpy as np
 
 def learn(pw, ph, patterns):
-   
+                           
     identity = np.identity(pw * ph)
     generalWeightMatrix = np.zeros((pw * ph, pw * ph))
   

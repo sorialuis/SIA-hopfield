@@ -14,7 +14,7 @@ def transformVectors(files):
         image = image/255
         vectors.append(image)
 
-    for j in vectors:
+    for j in vectors: 
         for i in range(j.shape[0]):
             if j[i] == 0:
                j[i] = -1
@@ -22,7 +22,7 @@ def transformVectors(files):
                  j[i] = -1
             elif j[i] > 0.80 and j[i] < 1:
                  j[i] = 1
-   # print(vectors)
+  
     return vectors
 
 
