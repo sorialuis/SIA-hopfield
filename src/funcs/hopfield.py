@@ -2,8 +2,7 @@
 import numpy as np
 
 def learn(pw, ph, patterns):
-    # si hacemos 5 x 5 nos da una identidad de 25 x 25 verificar (usar maximo entre los 2 valores)
-  
+   
     identity = np.identity(pw * ph)
     generalWeightMatrix = np.zeros((pw * ph, pw * ph))
   
@@ -16,7 +15,7 @@ def learn(pw, ph, patterns):
 
 def searchPattern(patternFail, mgw):
     input = np.sign(np.dot(patternFail, mgw))
-    iterations = 0
+    #iterations = 0
 
     for _ in range(100000):
         input = np.sign(np.dot(input, mgw))

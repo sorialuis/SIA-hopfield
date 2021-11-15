@@ -1,5 +1,5 @@
 from cv2 import cv2
-import numpy as np
+
 def transformVectors(files):
     vectors = []
     images = []
@@ -17,8 +17,12 @@ def transformVectors(files):
     for j in vectors:
         for i in range(j.shape[0]):
             if j[i] == 0:
-                j[i] = -1
-    print(vectors)
+               j[i] = -1
+            elif j[i] > 0.0001 and j[i] < 0.50:
+                 j[i] = -1
+            elif j[i] > 0.80 and j[i] < 1:
+                 j[i] = 1
+   # print(vectors)
     return vectors
 
 
@@ -33,7 +37,10 @@ def transformVector(file):
     for i in range(imgTest.shape[0]):
         if imgTest[i] == 0:
             imgTest[i] = -1
-        # vector.append(int(imgTest[i]))
-    # print(imgTest)
-    # print(vector)
+        elif imgTest[i] > 0.0001 and imgTest[i] < 0.50:
+             imgTest[i] = -1
+        elif imgTest[i] > 0.80 and imgTest[i] < 1:
+             imgTest[i] = 1
+            
     return imgTest
+
