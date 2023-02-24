@@ -10,7 +10,6 @@ def learn(pw, ph, patterns):
     return generalWeightMatrix
 
 def searchPattern(patternFail, mgw):
-    print(patternFail)
     input = np.sign(np.dot(patternFail, mgw))
 
     for _ in range(100):
