@@ -60,8 +60,7 @@ class UseHopfield(Ui_MainWindow):
         self.window = QtWidgets.QWidget()
         self.matrixWindow = Ui_MatrizGeneralPesos()
         self.matrixWindow.setupUi(self.window)
-        # self.model = TableModel(self.generalWeightMatrix.tolist())
-        self.model = TableModel([["0","1","2","3","-1"],["0","1","2","3","-1"]])
+        self.model = TableModel(self.generalWeightMatrix.tolist())
         self.matrixWindow.matrizGeneralPesos.setModel(self.model)
         self.window.show()
 

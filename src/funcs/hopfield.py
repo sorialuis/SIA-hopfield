@@ -1,4 +1,3 @@
-# import matplotlib.pyplot as plt
 import numpy as np
 
 def learn(pw, ph, patterns):
@@ -14,6 +13,6 @@ def searchPattern(patternFail, mgw):
     print(patternFail)
     input = np.sign(np.dot(patternFail, mgw))
 
-    # for _ in range(1):
-    #     input = np.sign(np.dot(input, mgw))
+    for _ in range(100):
+        input = np.sign(np.dot(input, mgw))
     return input

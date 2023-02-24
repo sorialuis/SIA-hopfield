@@ -30,7 +30,7 @@ class Ui_MatrizGeneralPesos(object):
         self.matrizGeneralPesos.setGridStyle(QtCore.Qt.SolidLine)
         self.matrizGeneralPesos.setObjectName("matrizGeneralPesos")
         self.matrizGeneralPesos.horizontalHeader().setVisible(False)
-        self.matrizGeneralPesos.horizontalHeader().setDefaultSectionSize(20)
+        self.matrizGeneralPesos.horizontalHeader().setDefaultSectionSize(30)
         self.matrizGeneralPesos.horizontalHeader().setHighlightSections(False)
         self.matrizGeneralPesos.horizontalHeader().setMinimumSectionSize(10)
         self.matrizGeneralPesos.verticalHeader().setVisible(False)
